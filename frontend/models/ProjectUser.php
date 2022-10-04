@@ -4,6 +4,7 @@ namespace frontend\models;
 
 use Yii;
 use common\models\User;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "project_user".
@@ -51,6 +52,13 @@ class ProjectUser extends \yii\db\ActiveRecord
             'user_id' => 'User ID',
             'role_id' => 'Role ID',
         ];
+    }
+
+    public function getRolesList()
+    {
+	$roles = Role::find()->all();
+	$rolesList = ArrayHelper::map($roles, 'id', 'name');
+	return $rolesList;
     }
 
     /**

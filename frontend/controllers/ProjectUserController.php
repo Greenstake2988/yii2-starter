@@ -8,6 +8,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use frontend\traits\EnforceProjectContextTrait;
+//use yii\rbac\Role;
 
 /**
  * ProjectUserController implements the CRUD actions for ProjectUser model.
@@ -32,7 +33,7 @@ class ProjectUserController extends Controller
             ]
         );
     }
-
+     
     /**
      * Lists all ProjectUser models.
      *
